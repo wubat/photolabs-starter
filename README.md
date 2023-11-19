@@ -22,3 +22,7 @@ Read `backend/readme` for further setup details.
 cd backend
 npm start
 ```
+
+## Screenshots
+!["home page view"] (https://github.com/wubat/photolabs-starter/blob/main/docs/photolabs_screenshot01.png?raw=true)
+!["focus modal view"] ()
