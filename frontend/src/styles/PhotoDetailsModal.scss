@@ -11,6 +11,11 @@
   border-radius: 12px;
 }
 
+.photo-details-modal-main-img__container {
+  display: flex;
+  justify-content: center;
+}
+
 .photo-details-modal__close-button {
   background-color: white;
   border: none;
@@ -59,6 +64,7 @@
 
 .photo-details-modal__photographer-location {
   color: #838383;
+  margin-left: -1.7rem;
 }
 .photo-details-modal__photographer-profile {
   object-fit: cover;
