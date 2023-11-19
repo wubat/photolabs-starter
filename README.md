@@ -25,4 +25,4 @@ npm start
 
 ## Screenshots
 !["home page view"] (https://github.com/wubat/photolabs-starter/blob/main/docs/photolabs_screenshot01.png?raw=true)
-!["focus modal view"] ()
+!["focus modal view"] (https://github.com/wubat/photolabs-starter/blob/main/docs/photolabs_screenshot02.png?raw=true)
