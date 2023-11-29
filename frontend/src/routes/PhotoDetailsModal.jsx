@@ -39,7 +39,9 @@ const PhotoDetailsModal = ({ handleCloseModal, state, onPhotoSelect, photos, tog
       <div className='photo-details-modal__top-bar' >  
         <div className='photo-details-modal__images' >
           
-          {similarPhotosArray}
+
+          {similarPhotosArray} 
+          
         
         </div>
       </div>

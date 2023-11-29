@@ -6,28 +6,11 @@ function PhotoFavButton( { toggleFavoritedPhotos, photoId,  favPhotoArray }) {
 
   const [isFavorited, setFavorited] = useState(false) 
   
-  // const toggleFavorited = useCallback(() => {
-  //   setFavoritedPhoto(props.photo)
-  // }, [] )
-
- 
-  
-  // const handleClick = () => {
-  //   // toggleFavorited()
-  //   props.toggleFavoritedPhotos(props.photoId)
-  // }
-
-  
   const handleClick = (event) => {
     event.stopPropagation(); 
     setFavorited(prev => !prev)
     toggleFavoritedPhotos(photoId);
   };
-
-
-  
-
-  console.log(favPhotoArray)
 
   return (
     <div className="photo-list__fav-icon" onClick={handleClick}>
