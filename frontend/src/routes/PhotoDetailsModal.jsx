@@ -22,10 +22,12 @@ const PhotoDetailsModal = ({ handleCloseModal, state, onPhotoSelect, photos, tog
 
         <div className="photo-details-modal-main-img__container" >
         <div className='photo-details-modal__header'>
+
           <PhotoFavButton 
           toggleFavoritedPhotos={toggleFavoritedPhotos}
           photoId={state.selectedPhoto.id}
           />
+          
           <img src={state.selectedPhoto.urls.full} className='photo-details-modal__image' />
 
           <div className='photo-details-modal__photographer-details' >

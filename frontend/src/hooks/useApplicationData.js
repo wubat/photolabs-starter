@@ -27,7 +27,6 @@ function reducer(state, action) {
 
     case 'SET_PHOTOS_BY_TOPIC':
       return{...state, photoData: action.payload}
-////////////////////////////////////////////////////////
 
     case 'SET_FAVORITED_PHOTO':
       return{...state, isFavorited: state.isFavorited ? !state.isFavorited : state.isFavorited}
@@ -73,11 +72,10 @@ function useApplicationData() {
         console.error('Error fetching photos:', error);
       });
   };
-//////////////////////////////////////////
+
   const setFavoritedPhoto = (photoId) => {
     dispatch({type: 'SET_FAVORITED_PHOTO', payload: { photoId }})
   }
-//////////////////////////////////////////////
 
   useEffect(() => {
     fetch('http://localhost:8001/api/photos') //get default photo set
