@@ -12,6 +12,7 @@ const App = () => {
     updateToFavPhotoIds,
     onClosePhotoDetailsModal,
     fetchPhotosByTopic,
+    setFavoritedPhoto
   } = useApplicationData()
 
   //checks if favPhotos Array is populated for header badge
@@ -26,6 +27,9 @@ const App = () => {
         photos={state.photoData}
         topic={state.topicData}
         fetchPhotosByTopic={fetchPhotosByTopic}
+        setFavoritedPhoto={setFavoritedPhoto}
+        isFavorited={state.isFavorited}
+        favPhotoArray={state.favPhotoIds}
       />
 
       {state.isModalOpen && 
@@ -35,6 +39,7 @@ const App = () => {
           toggleFavoritedPhotos={updateToFavPhotoIds}
           onPhotoSelect={onPhotoSelect}
           state={state}
+          setFavoritedPhoto={setFavoritedPhoto}
         />
       }
       

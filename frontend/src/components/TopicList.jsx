@@ -4,13 +4,14 @@ import "../styles/TopicList.scss";
 
 
 
-const TopicList = ({topic, fetchPhotosByTopic}) => {
+const TopicList = ({ topic, fetchPhotosByTopic, toggleFavoritedPhotos }) => {
   const topicsArray = topic.map((singleTopic) => ( //map dataset to each topic section
     <TopicListItem 
       key={singleTopic.id} 
       id={singleTopic.id}
       data={singleTopic} 
       fetchPhotosByTopic={fetchPhotosByTopic}
+      toggleFavoritedPhotos={toggleFavoritedPhotos}
     />
   ))
 

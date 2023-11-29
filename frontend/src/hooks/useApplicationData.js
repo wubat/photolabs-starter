@@ -1,4 +1,4 @@
-import { useState, useReducer, useEffect } from 'react'
+import { useState, useReducer, useEffect, useCallback } from 'react'
 
 
 
@@ -27,6 +27,10 @@ function reducer(state, action) {
 
     case 'SET_PHOTOS_BY_TOPIC':
       return{...state, photoData: action.payload}
+////////////////////////////////////////////////////////
+
+    case 'SET_FAVORITED_PHOTO':
+      return{...state, isFavorited: state.isFavorited ? !state.isFavorited : state.isFavorited}
 
     default:
     throw new Error(`Unsupported action type: ${action.type}`);
@@ -41,7 +45,8 @@ function useApplicationData() {
     favPhotoIds: [],
     selectedPhoto: null,
     photoData: [],
-    topicData: []
+    topicData: [],
+    isfavorited: false
   }
 
   const[state, dispatch] = useReducer(reducer, initialState)
@@ -68,6 +73,11 @@ function useApplicationData() {
         console.error('Error fetching photos:', error);
       });
   };
+//////////////////////////////////////////
+  const setFavoritedPhoto = (photoId) => {
+    dispatch({type: 'SET_FAVORITED_PHOTO', payload: { photoId }})
+  }
+//////////////////////////////////////////////
 
   useEffect(() => {
     fetch('http://localhost:8001/api/photos') //get default photo set
@@ -93,7 +103,8 @@ function useApplicationData() {
     onPhotoSelect,
     updateToFavPhotoIds,
     onClosePhotoDetailsModal,
-    fetchPhotosByTopic
+    fetchPhotosByTopic,
+    setFavoritedPhoto
   }
 }
 

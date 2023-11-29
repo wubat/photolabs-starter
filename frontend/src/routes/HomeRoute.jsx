@@ -5,7 +5,7 @@ import PhotoList from '../components/PhotoList'
 import TopNavigation from '../components/TopNavigationBar';
 
 
-const HomeRoute = ({ isFavPhotoExist, toggleFavoritedPhotos, onPhotoSelect , photos, topic, fetchPhotosByTopic }) => {
+const HomeRoute = ({ isFavPhotoExist, toggleFavoritedPhotos, onPhotoSelect , photos, topic, fetchPhotosByTopic, setFavoritedPhoto, isFavorited, favPhotoArray }) => {
 
   return (
     <div className="home-route">
@@ -13,6 +13,8 @@ const HomeRoute = ({ isFavPhotoExist, toggleFavoritedPhotos, onPhotoSelect , pho
         isFavPhotoExist={isFavPhotoExist}
         topic={topic}
         fetchPhotosByTopic={fetchPhotosByTopic}
+        toggleFavoritedPhotos={toggleFavoritedPhotos}
+        
       />
 
       <div className="photo-list">
@@ -20,6 +22,9 @@ const HomeRoute = ({ isFavPhotoExist, toggleFavoritedPhotos, onPhotoSelect , pho
           toggleFavoritedPhotos={toggleFavoritedPhotos}
           onPhotoSelect={onPhotoSelect}
           photos={photos}
+          setFavoritedPhoto={setFavoritedPhoto}
+          isFavorited={isFavorited}
+          favPhotoArray={favPhotoArray}
       />
 
         </div>

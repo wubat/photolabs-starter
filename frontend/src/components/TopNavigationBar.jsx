@@ -4,7 +4,7 @@ import '../styles/TopNavigationBar.scss'
 import TopicList from './TopicList';
 import FavBadge from './FavBadge';
 
-const TopNavigation = ({ isFavPhotoExist, topic, fetchPhotosByTopic}) => {
+const TopNavigation = ({ isFavPhotoExist, topic, fetchPhotosByTopic, toggleFavoritedPhotos}) => {
 
   return (
     <div className="top-nav-bar">
@@ -12,6 +12,7 @@ const TopNavigation = ({ isFavPhotoExist, topic, fetchPhotosByTopic}) => {
       <TopicList 
         topic={topic}
         fetchPhotosByTopic={fetchPhotosByTopic}
+        toggleFavoritedPhotos={toggleFavoritedPhotos}
       />
       <FavBadge 
         isFavPhotoExist={isFavPhotoExist}

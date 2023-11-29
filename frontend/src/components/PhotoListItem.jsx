@@ -5,13 +5,18 @@ import PhotoFavButton from "./PhotoFavButton";
 
 
 
-const PhotoListItem = ({onPhotoSelect, data, toggleFavoritedPhotos}) => {
+const PhotoListItem = ({onPhotoSelect, data, toggleFavoritedPhotos, setFavoritedPhoto, isFavorited, favPhotoArray }) => {
+
+// console.log(favPhotoArray)
 
   return(
     <div className="photo-list__item" onClick={()=> onPhotoSelect(data)}>
       <PhotoFavButton  
         toggleFavoritedPhotos={toggleFavoritedPhotos}
         photoId={data.id}
+        setFavoritedPhoto={setFavoritedPhoto}
+        isFavorited={isFavorited}
+        favPhotoArray={favPhotoArray}
       />
 
       <img src={data.urls.regular} className="photo-list__image"/>
