@@ -5,7 +5,14 @@ import PhotoFavButton from "./PhotoFavButton";
 
 
 
-const PhotoListItem = ({onPhotoSelect, data, toggleFavoritedPhotos, setFavoritedPhoto, isFavorited, favPhotoArray }) => {
+const PhotoListItem = ({
+  onPhotoSelect, 
+  data, 
+  toggleFavoritedPhotos, 
+  setFavoritedPhoto, 
+  isFavorited, 
+  favPhotoArray 
+}) => {
 
   return(
     <div className="photo-list__item" onClick={()=> onPhotoSelect(data)}>
