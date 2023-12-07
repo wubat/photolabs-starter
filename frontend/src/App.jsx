@@ -40,6 +40,7 @@ const App = () => {
           onPhotoSelect={onPhotoSelect}
           state={state}
           setFavoritedPhoto={setFavoritedPhoto}
+          favPhotoArray={state.favPhotoIds}
         />
       }
       

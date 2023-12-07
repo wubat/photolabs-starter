@@ -5,19 +5,13 @@ import '../styles/PhotoFavButton.scss';
 function PhotoFavButton( { 
   toggleFavoritedPhotos, 
   photoId, 
-  favPhotoArray,
-  selectedPhoto
-  // isFavorited
+  favPhotoArray
 }) {
 
-  // const [isFavorited, setFavorited] = useState(false) 
-  
-  const selected = favPhotoArray?.includes(photoId) || selectedPhoto
-
+  const selected = favPhotoArray?.includes(photoId) 
 
   const handleClick = (event) => {
-    event.stopPropagation(); 
-    // setFavorited(prev => !prev)
+    event.stopPropagation()
     toggleFavoritedPhotos(photoId);
   };
 

@@ -5,7 +5,14 @@ import closeSymbol from '../assets/closeSymbol.svg';
 import PhotoFavButton from "../components/PhotoFavButton";
 import PhotoListItem from 'components/PhotoListItem';
 
-const PhotoDetailsModal = ({ handleCloseModal, state, onPhotoSelect, photos, toggleFavoritedPhotos, ...props }) => {
+const PhotoDetailsModal = ({ 
+  handleCloseModal, 
+  state, 
+  photos, 
+  toggleFavoritedPhotos, 
+  favPhotoArray 
+}) => {
+
   const similarPhotosArray = Array.from(Array(4)).map((_, index) => (
     <PhotoListItem
       key={index}
@@ -25,7 +32,8 @@ const PhotoDetailsModal = ({ handleCloseModal, state, onPhotoSelect, photos, tog
 
           <PhotoFavButton 
           toggleFavoritedPhotos={toggleFavoritedPhotos}
-          selectedPhoto={state.selectedPhoto.id}
+          photoId={state.selectedPhoto.id}
+          favPhotoArray={favPhotoArray}
           />
           
           <img src={state.selectedPhoto.urls.full} className='photo-details-modal__image' />
