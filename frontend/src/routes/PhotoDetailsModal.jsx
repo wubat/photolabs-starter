@@ -18,6 +18,8 @@ const PhotoDetailsModal = ({
       key={index}
       data={photos[index]}
       toggleFavoritedPhotos={toggleFavoritedPhotos}
+      photoId={state.selectedPhoto.id}
+      favPhotoArray={favPhotoArray}
     />
   ))
 
